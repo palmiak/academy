@@ -10,7 +10,7 @@ const site = site_url || 'http://localhost:4321';
 export default defineConfig({
   site: site,
   base: 'academy',
-  publicDir: 'academy/public',
+  root: 'academy',
   image: {
 		service: passthroughImageService(),
 	},
