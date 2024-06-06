@@ -12,10 +12,11 @@ if ( path === '' ) {
 }
 const imageSrc = '/open-graph/' + path + '.png';
 const canonicalImageSrc = new URL(imageSrc, Astro.site);
+const sitemapSrc = new URL('/sitemap-index.xml', Astro.site);
 ---
 <Default {...Astro.props}><slot /></Default>
 <meta property="og:image" content={canonicalImageSrc} />
-<link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="sitemap" href={sitemapSrc} />
 
 {!isDev && <meta name="google-site-verification" content="EUHJIOL0FDdVtcpY92rKZaoq8IEPafmsafa5oBnrzHs" />}
 {isDev && <meta name="robots" content="noindex" />}
