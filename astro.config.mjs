@@ -11,7 +11,7 @@ export default defineConfig({
   site: site,
   base: 'academy',
   image: {
-     service: passthroughImageService(),
+    service: passthroughImageService(),
   },
   integrations: [starlight({
     title: 'Patchstack Academy',
