@@ -9,10 +9,10 @@ const site = site_url || 'http://localhost:4321';
 // https://astro.build/config
 export default defineConfig({
   site: site,
-  root: 'academy',
+  base: 'academy',
   image: {
-		service: passthroughImageService(),
-	},
+     service: passthroughImageService(),
+  },
   integrations: [starlight({
     title: 'Patchstack Academy',
     favicon: '/images/psfavicon.svg',
