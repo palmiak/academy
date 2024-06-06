@@ -9,7 +9,6 @@ const site = site_url || 'http://localhost:4321';
 // https://astro.build/config
 export default defineConfig({
   site: site,
-  base: 'academy',
   root: 'academy',
   publicDir: 'public',
   image: {
