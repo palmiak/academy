@@ -6,11 +6,11 @@ const { isFallback, lang } = Astro.props;
 
 const isDev = import.meta.env.type === 'development';
 
-let path = Astro.url.pathname.replace(/^\//, '').replace(/\/$/, '');
+let path = Astro.url.pathname.replace(/^\//, '').replace(/\/$/, '').replace('academy/', 'academy/open-graph/');
 if ( path === '' ) {
 	path = 'index';
 }
-const imageSrc = '/open-graph/' + path + '.png';
+const imageSrc = path + '.png';
 const canonicalImageSrc = new URL(imageSrc, Astro.site);
 const sitemapSrc = new URL('/sitemap-index.xml', Astro.site);
 ---
